@@ -1,0 +1,96 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link href="StyleSheet.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <header id="header">  
+            <asp:Table ID="Table1" runat="server" Width="100%" Border="1">
+                <asp:TableRow>
+                    <asp:TableCell Width="20%">
+                        <asp:Image ID="Image1" runat="server" ImageUrl="~/images/LOGO.jpg" />
+                    </asp:TableCell>
+                    <asp:TableCell Width="80%">
+                        <h1>
+                        <marquee>
+                            "A PARTY WITHOUT A CAKE IS JUST A MEETING!"
+                        </marquee>
+                        </h1>
+                    </asp:TableCell>
+                </asp:TableRow>
+            </asp:Table>  
+        </header>  
+   <center> <nav id="nav"> 
+    <ul>  
+        <li><a href="home.aspx">Home</a></li>  
+        <li><a href="#">Blog</a></li>  
+        <li><a href="#">About Us</a></li>  
+        <li><a href="contactus.aspx">ContactUs</a></li>  
+         <li> <a href="#">My Cart</a></li> 
+    </ul>  
+    </nav> 
+       </center> 
+    <aside id="side" style="font-family: 'Yu Mincho Demibold'; font-size:medium; font-weight: bold; font-style: normal; color: #660066; background-color: #FFFFFF">  
+        <h1 style="padding: 2px; font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: x-large; font-weight: bolder; font-style: normal; color: #800000; background-color: #FFFF99; text-decoration: underline overline;">Categories</h1>  
+        <ol>
+              <li>
+                  <h3><asp:Label ID="Label1" runat="server" Text="Fruit Cake"></asp:Label></h3>
+                  <asp:DropDownList ID="DropDownList1" runat="server">
+                       <asp:ListItem value="" >Choose Your Flavour</asp:ListItem>
+                      <asp:ListItem value="fruitcake" >Pineapple</asp:ListItem>
+                      <asp:ListItem value="fruitcake">Banana</asp:ListItem>
+                      <asp:ListItem value="fruitcake">Mango</asp:ListItem>
+                  </asp:DropDownList>
+                  
+              </li>
+             <li>
+                  <h3><asp:Label ID="Label2" runat="server" Text="Dry Cake"></asp:Label></h3>
+                  <asp:DropDownList ID="DropDownList2" runat="server">
+                      <asp:ListItem value="" >Choose Your Flavour</asp:ListItem>
+                      <asp:ListItem value="fruitcake">Walnut</asp:ListItem>
+                      <asp:ListItem value="fruitcake">Chocolate</asp:ListItem>
+                      <asp:ListItem value="fruitcake">Vanilla</asp:ListItem>
+                  </asp:DropDownList>
+
+              </li>
+            <li>
+                  <h3><asp:Label ID="Label3" runat="server" Text="Pies"></asp:Label></h3>
+                      <asp:DropDownList ID="DropDownList3" runat="server">
+                         <asp:ListItem value="" >Choose Your Flavour</asp:ListItem>
+                         <asp:ListItem value="fruitcake">Apple</asp:ListItem>
+                         <asp:ListItem value="fruitcake">Bread Caramel</asp:ListItem>
+                         <asp:ListItem value="fruitcake">Strawberry</asp:ListItem>
+                  </asp:DropDownList>
+
+              </li>
+            <li>
+                 <h3> <asp:Label ID="Label4" runat="server" Text="Pasteries"></asp:Label></h3>
+                     <asp:DropDownList ID="DropDownList4" runat="server">
+                        <asp:ListItem value="" >Choose Your Flavour</asp:ListItem>
+                         <asp:ListItem value="fruitcake">Black Forest</asp:ListItem>
+                         <asp:ListItem value="fruitcake">Cookie and Creme</asp:ListItem>
+                         <asp:ListItem value="fruitcake">Butterscotch</asp:ListItem>
+                  </asp:DropDownList>
+
+              </li>
+        </ol>
+    </aside>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    
+    </div>
+    </form>
+    <footer id="footer">  
+        Free shipping on all orders above $500
+    </footer>
+</body>
+</html>
